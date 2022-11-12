@@ -34,7 +34,7 @@ int main() {
   NasaRoverFactory rover_factory;
 
   NasaController controller(&reader, &validator, &rover_factory);
-  auto positions = controller.Play("../data/console-input.txt");
+  auto positions = controller.Play("../data/random-config.txt");
 
   for (auto position : positions) {
     std::cout << position.coordinate.x << " " << position.coordinate.y << " "

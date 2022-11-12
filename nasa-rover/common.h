@@ -19,7 +19,7 @@ struct Position {
   Cardinal cardinal;
 };
 
-enum class Instruction { kTurnLeft, kTurnRight, kMove };
+enum Instruction { kTurnLeft, kTurnRight, kMove };
 
 struct RoverConfig {
   Position start_position;

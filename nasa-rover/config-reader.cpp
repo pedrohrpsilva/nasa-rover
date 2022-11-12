@@ -126,5 +126,6 @@ const Config NasaConfigReader::Read(const std::string& filepath) const {
     input.rover_inputs.push_back(RoverConfig{rover_start_position, instructions});
   }
 
+  file.close();
   return input;
 }
