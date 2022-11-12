@@ -1,0 +1,19 @@
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+BasedOnStyle: Google
+ColumnLimit: 100
+DerivePointerAlignment: true
+PointerAlignment: Left
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex:    '<Q[[:alnum:]]+>'
+    Priority: 2
+  - Regex:    '<[[:graph:]]+\.[[:alnum:]]+>'
+    Priority: 2
+  - Regex:    '<[[:alnum:]\_]+>'
+    Priority: 1
+  - Regex:    '[[:graph:]]+'
+    Priority: 3
+BinPackArguments: false
+BinPackParameters: false
