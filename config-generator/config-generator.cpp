@@ -4,6 +4,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <stdlib.h>
 
 #include <common.h>
 
@@ -25,6 +26,7 @@ std::vector<Instruction> RandomInstructions(int num_instructions) {
 }
 
 int main() {
+  srand(time(0));
   // Generate plateau between 10x10 to 110x110.
   int plateau_x = rand() % 100 + 10;
   int plateau_y = rand() % 100 + 10;
