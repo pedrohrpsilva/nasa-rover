@@ -2,6 +2,7 @@
 
 #include "common.h"
 
+// The class that represents a rover and all actions that the rover could take.
 class IRover {
  public:
   virtual void Move() = 0;

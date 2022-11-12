@@ -2,6 +2,8 @@
 
 #include "common.h"
 
+// A Mars plateau represented by a rect defined from (0,0) as left-lower point and a upper-right
+// coordinate passed as input.
 struct Plateau {
   Coordinate upper_right_coordinate;
 };

@@ -3,6 +3,9 @@
 #include "common.h"
 #include "plateau.h"
 
+// This service is responsible to validate a Config.
+// Some validations could be: if is inside the plateau, if the user pass a rover config, and others.
+// If all validations pass, the function returns true. Otherwise, the function returns false.
 class IConfigValidator {
  public:
   virtual bool Validate(const Config& input) const = 0;

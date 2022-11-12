@@ -12,6 +12,12 @@ class ReadConfigFileException : public std::exception {};
 class ValidateConfigException : public std::exception {};
 
 // TODO(anyone): In the future, check if a Factory should be used instead use exception.
+
+// This service is responsible to control the Rover from the config readed from the file.
+// Some assumptions were followed to define the behavior taken:
+// 1- N-rovers could be in the same position.
+// 2- The rover could fall from plateau (outside of plateau). In this case, the rover stop to move.
+// 3- The fall of a rover does not end the operation.
 class NasaController {
  public:
   explicit NasaController(IConfigReader* reader,
@@ -26,6 +32,8 @@ class NasaController {
     }
   }
 
+  // Read the config file and execute the instructions to all rovers.
+  // If success, returns the end positions of all Rovers. Otherwise, a exception will be emited.
   std::vector<Position> Play(const std::string& filepath);
 
  private:

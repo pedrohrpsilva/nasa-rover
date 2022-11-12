@@ -9,6 +9,8 @@ struct Coordinate {
 };
 
 // Represent the four cardinal compass points.
+// Do not alter the order!
+// This order was take to speed-up the process of turn left/right.
 enum Cardinal { kNorth = 0, kWest, kSouth, kEast };
 
 // Represent a position that the Rover could be.
