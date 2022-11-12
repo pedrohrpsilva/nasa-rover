@@ -10,7 +10,7 @@ std::vector<Position> NasaController::Play(const std::string& filepath) {
     throw ReadConfigFileException();
   }
 
-  Plateau plateau(config.upper_right_coordinate);
+  Plateau plateau{config.upper_right_coordinate};
 
   if (!validator_->Validate(config)) {
     std::cout << "[ERROR] Invalid configuration. Check if the config file is right.";
