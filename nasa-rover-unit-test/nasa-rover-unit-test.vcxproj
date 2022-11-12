@@ -36,19 +36,20 @@
     <ClCompile Include="config-reader-test.cpp" />
     <ClCompile Include="config-validator-test.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="nasa-controller-test.cpp" />
     <ClCompile Include="plateau-test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\nasa-rover\nasa-rover.vcxproj">
       <Project>{3dd6d73c-1a1f-4e8f-a3ba-10c728f801db}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mocks.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
